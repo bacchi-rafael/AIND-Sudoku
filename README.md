@@ -3,17 +3,26 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: The solution I implemented to find naked twins is to look in each unit in the sudoku
+for repeated 2 character values and in case it exists, the values from those boxes are
+removed from the remaining peers in the unit. Once the method is implemented I added
+it as a new constraint in reduce_puzzle so it will help in the solution of the sudoku
+by constraint propagation.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: Diagonal constraints were added in a different form. Instead of using a new method,
+like naked twins, I created 2 new units and added them to unitlist.
+Considering this variable will be used on all the constraint propagation methods
+(eliminate, only_choice and naked_twins), the new constraint is guaranteed to be
+respected.
+
 
 ### Install
 
 This project requires **Python 3**.
 
-We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project.
 Please try using the environment we provided in the Anaconda lesson of the Nanodegree.
 
 ##### Optional: Pygame
