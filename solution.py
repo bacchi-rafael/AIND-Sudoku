@@ -139,7 +139,7 @@ def search(values):
       Output: The resulting sudoku in dictionary form, or False in case the current attempt does not solve the sudoku.
     """
     grid = reduce_puzzle(values)
-    if !grid:
+    if not grid:
         return False
     elif is_solved(grid):
         return grid
